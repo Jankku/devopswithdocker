@@ -1,0 +1,16 @@
+jankku@Slim7:~$ docker run -d -it ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; apt update; apt install curl; curl http://$website;'
+b5e48503c8d6ebdd535a6fa4b055a057634d45d5fe567ff14ac2ba0fce869fe6
+jankku@Slim7:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                   CREATED         STATUS         PORTS     NAMES
+b5e48503c8d6   ubuntu    "sh -c 'echo \"Input …"   3 seconds ago   Up 2 seconds             hardcore_mclaren
+jankku@Slim7:~$ docker attach hardcore_mclaren
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
+jankku@Slim7:~$

@@ -1,0 +1,10 @@
+# Dockerfile
+FROM golang:1.16
+COPY . .
+RUN unset GOPATH && go build
+ENV REQUEST_ORIGIN=http://127.0.0.1
+EXPOSE 8080
+CMD ./server
+
+# Command
+docker run -d -p 8080:8080 example-backend

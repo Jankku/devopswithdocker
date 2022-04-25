@@ -1,0 +1,6 @@
+# Dockerfile
+FROM devopsdockeruh/simple-web-service:alpine
+CMD server
+
+# Shell
+jankku@Slim7:~/1.7$ docker run web-server

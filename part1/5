@@ -1,0 +1,16 @@
+jankku@Slim7:~$ docker pull devopsdockeruh/simple-web-service:alpine
+jankku@Slim7:~$ docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   13 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   13 months ago   15.7MB
+jankku@Slim7:~$ docker run -d -it devopsdockeruh/simple-web-service:alpine
+fffc9ef0c59f75e863a00ab4083c71c89582e74c2f2a2336fe002554d6c73381
+jankku@Slim7:~$ docker ps -a
+CONTAINER ID   IMAGE                                      COMMAND                   CREATED          STATUS                      PORTS     NAMES
+fffc9ef0c59f   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"     3 seconds ago    Up 2 seconds                          jovial_noyce
+b5e48503c8d6   ubuntu                                     "sh -c 'echo \"Input …"   17 minutes ago   Exited (0) 16 minutes ago             hardcore_mclaren
+jankku@Slim7:~$ docker exec -it jovial_noyce sh
+/usr/src/app # tail -f ./text.log
+2022-04-21 15:49:26 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-04-21 15:49:28 +0000 UTC

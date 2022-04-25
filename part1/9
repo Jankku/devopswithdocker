@@ -1,0 +1,2 @@
+jankku@Slim7:~/1.9$ touch text.log
+jankku@Slim7:~/1.9$ docker run -d -it -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service:alpine

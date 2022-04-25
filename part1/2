@@ -1,0 +1,5 @@
+jankku@Slim7:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+jankku@Slim7:~$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+jankku@Slim7:~$
